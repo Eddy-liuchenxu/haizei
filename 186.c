@@ -7,13 +7,20 @@
 
 #include<stdio.h>
 
-int n,a[100002],i;
-
-int f()
+int f(int n, int a[]) {
+    int sum = 0, s = 1;
+    for(int i = 1; n >= s;i = s ) {
+        s = s + a[i];
+        sum += 1;
+    }
+    return sum;
+}
 
 int main() {
-    scanf("%d",&n);
-    for(i = 1;i <= 5;i++){
-       scanf("%d", &a[i])
+    int n,i, a[100000] = {0};
+    scanf("%d", &n);
+    for(i = 1;i <= n; i++){
+        scanf("%d", &a[i]);
     }
+    printf("%d", f(n, a));
 }
