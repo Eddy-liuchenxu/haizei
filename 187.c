@@ -7,18 +7,18 @@
 
 #include<stdio.h>
 
-int f(int n) {
+long long f(long long n) {
     if(n == 1) return 1;
     return 2 * f(n - 1) + 1;
 }
 
-int g(int n) {
+long long g(long long n) {
     if(n == 1) return 1;
-    return n  + 2 * f(n  - 1);
+    return n  + 2 * g(n  - 1);
 }
 
 int main() {
-    int n;
-    scanf("%d", &n);
-    printf("%d%d", f(n), g(n);
+    long long n;
+    scanf("%lld", &n);
+    printf("%lld %lld", f(n), g(n));
 }
