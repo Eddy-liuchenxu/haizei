@@ -1,13 +1,14 @@
 /*************************************************************************
-	> File Name: 2.cpp
+	> File Name: 530.cpp
 	> Author: 
 	> Mail: 
-	> Created Time: 2019年08月21日 星期三 19时59分32秒
+	> Created Time: 2020年04月08日 星期三 18时15分55秒
  ************************************************************************/
 
-#include<iostream>
+#include <iostream>
+#include <queue>
 using namespace std;
-int main() {
-    open
-    cout << INT64_MAX <<endl;
+
+int main(){
+
 }

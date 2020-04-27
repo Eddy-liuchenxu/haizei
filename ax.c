@@ -1,13 +1,11 @@
 /*************************************************************************
-	> File Name: 2.cpp
+	> File Name: ax.c
 	> Author: 
 	> Mail: 
-	> Created Time: 2019年08月21日 星期三 19时59分32秒
+	> Created Time: 2020年03月26日 星期四 17时03分03秒
  ************************************************************************/
 
-#include<iostream>
-using namespace std;
-int main() {
-    open
-    cout << INT64_MAX <<endl;
+#include <stdio.h>
+int main(){
+    printf("abc");
 }
