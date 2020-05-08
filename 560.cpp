@@ -1,29 +1,25 @@
-/*************************************************************************
-	> File Name: 560.cpp
-	> Author: 
-	> Mail: 
-	> Created Time: 2020年04月29日 星期三 19时00分07秒
- ************************************************************************/
-#include<algorithm>
 #include <iostream>
+#include <algorithm>
 using namespace std;
 
-struct num{
-    int v,p;
-    int sum;
-};
+int money_all, n, money[30], val[30], ans[30][30005];
 
-bool cmp(num a, num b){
-    return a.sum > b.sum;
-}
-int main(){
-    int n,m;
-    num num1[30];
-    cin >> n >> m;
-    for(int i = 0; i < m; i++){
-        cin >> num1[i].v >> num1[i].p;
-        num1[i].sum = num1[i].v * num1[i].p;
+int main() {
+    cin >> money_all >> n;
+    for (int i = 1; i <= n; i++) {
+        cin >> money[i] >> val[i];
+        val[i] *= money[i];
     }
-    sort(num1,num1+m,cmp);
+    for (int i = 1; i <= n; i++) {
+        for (int j = 1; j <= money_all; j++) {
+            if (j < money[i]) {
+                ans[i][j] = ans[i - 1][j];
+            } else {
+                ans[i][j] = max(ans[i - 1][j], ans[i - 1][j - money[i]] + val[i]);
+            }
+        }
+    }
+    cout << ans[n][money_all] << endl;
     return 0;
 }
+ 
